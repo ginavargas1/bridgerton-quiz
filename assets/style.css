@@ -1,0 +1,39 @@
+*, *::before, ::after {
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    padding: 0, auto;
+    margin: 0, auto;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.container {
+    width: 800px;
+    max-width: 75%;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 0 5px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2);
+    gap: 10px;
+    margin: 10px;
+}
+
+.btn {
+    border: 1px antiquewhite;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: gray;
+}
