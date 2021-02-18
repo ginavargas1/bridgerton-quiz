@@ -1,6 +1,6 @@
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById ('results');
-var submitButton = document.getElementById ('Submit');
+var submitButton = document.getElementById ('submit');
 var questions = [
     {
         question: "Who does the Daphne end up with?",
@@ -34,21 +34,40 @@ var questions = [
 
     {
         question: "What type of music is used throughout the show?",
-        a: "Contemporary Pop Tunes",
-        b: "Classic Mozart",
-        c: "Contempary Jazz",
-        d: "None of the Above",
-        answer: "A"
+        choices: ["Contemporary Pop Tunes", "Classic Mozart", "Contempary Jazz", "None of the Above"],
+        answer: "Contemporary Pop Tunes"
 
-    },
+    };
+ 
+    var index = 0;
+    var questionObj = questions[index];
 
+    for(var = 0; i<questions[index].choicese.length; i++) {
+        var choicesElements =document.createElement('li')
+        choicesElements.setAttribute("class", "choices")
+        choicesElements.textContent = questionsObj.choices[i]
+        document.body.appendChild(choicesElements);
+    };
+
+    document.body.addEventListener("click", function(event)) {
+        if (event.target)
+    }
+    
+    // add questionElements to html 
+
+    questionElement.textContent = questions[index]
 
 ]
+
+// Countdown timer completed
+function get(x) {
+    return document.getElementById(x);
+}
 
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+    var countdown = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -59,6 +78,7 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = duration;
+            clearInterval(countdown)
         }
     }, 1000);
 }
