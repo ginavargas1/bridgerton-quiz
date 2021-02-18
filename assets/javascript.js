@@ -1,7 +1,32 @@
-var quizContainer = document.getElementById('quiz');
-var resultsContainer = document.getElementById ('results');
-var submitButton = document.getElementById ('submit');
-var questions = [
+const startButton = document.getElementById('start-btn')
+const questionContainerElement = document.getElementById ('question-container')
+const shuffledQuestions, currentQuestionIndex
+const questionElement = document.getElementById('question')
+const answerButtonElement = document.getElementById ('answer-buttons')
+
+
+ startButton.addEventListener("click", startGame) 
+
+
+
+ function startGame() {
+     console.log('Started')
+     startButton.classList.add('hide')
+     shuffledQuestions = questions.sort (()=> Math.random() - .5)
+     currentQuestionIndex = 0
+     questionContainerElement.classList.remove('hide')
+     setNextQuestion()
+ }
+
+ function setNextQuestion(){
+    showQuestion (shuffledQuestions[currentQuestionIndex])
+ }
+
+ function selectAnswer () {
+
+ }
+
+const questions = [
     {
         question: "Who does the Daphne end up with?",
         a: "Simon Basset",

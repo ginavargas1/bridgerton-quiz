@@ -36,4 +36,37 @@ body {
     border-radius: 5px;
     padding: 5px 10px;
     color: gray;
+    outline: none;
 }
+
+.btn:hover {
+    background-color: lightsteelblue;
+}
+
+.btn.correct {
+    color: green;
+}
+
+.btn.wrong {
+    color: red;
+}
+
+.start-btn, .next-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 5px;
+    padding: 7px 13px;
+
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hide {
+    display: none;
+}
+
