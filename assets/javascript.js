@@ -1,31 +1,8 @@
-var startButton = document.getElementById('start-btn')
-var questionContainerElement = document.getElementById ('question-container')
-// var shuffledQuestions, currentQuestionIndex
-var questionElement = document.getElementById('question')
-var answerButtonElement = document.getElementById ('answer-buttons')
-
-
- startButton.addEventListener("click", startGame) 
-
-
-
- function startGame() {
-     console.log('Started')
-     startButton.classList.add('hide')
-     shuffledQuestions = questions.sort (()=> Math.random() - .5)
-     currentQuestionIndex = 0
-     questionContainerElement.classList.remove('hide')
-     setNextQuestion()
- }
-
- function setNextQuestion(){
-    showQuestion (shuffledQuestions[currentQuestionIndex])
- }
-
- function selectAnswer () {
-
- }
-
+var startButton = document.getElementById('start-btn');
+var questionContainerElement = document.getElementById ('question-container');
+var questionElement = document.getElementById('question');
+var answerButtonElement = document.getElementById('answer-buttons');
+var index = 0;
 var questions = [
     {
         question: "Who does the Daphne end up with?",
@@ -52,33 +29,27 @@ var questions = [
         question: "What type of music is used throughout the show?",
         choices: ["Contemporary Pop Tunes", "Classic Mozart", "Contempary Jazz", "None of the Above"],
         answer: "Contemporary Pop Tunes"
-    }:
- 
-    var index = 0;
-    var questionObj = questions[index];
-
-    for(var = 0; i<questions[index].choicese.length; i++) {
-        var choicesElements =document.createElement('li')
-        choicesElements.setAttribute("class", "choices")
-        choicesElements.textContent = questionsObj.choices[i]
-        document.body.appendChild(choicesElements);
-    };
-
-    document.body.addEventListener("click", function(event)) {
-        if (event.target)
     }
-    
-    // add questionElements to html 
+];
+var questionObj = questions[index];
 
-    questionElement.textContent = questions[index]
+startButton.addEventListener("click", startGame)
 
-]
+function startGame() {
+    startButton.classList.add('hide');
+    questionContainerElement.classList.remove('hide')
+    startTimer()
+};
 
-// Countdown timer completed
-function get(x) {
-    return document.getElementById(x);
+function setNextQuestion() {
+    showQuestion (question)
 }
 
+function showQuestion(questions, container) {
+    questionElement.innerText = question.question
+}
+
+function show
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
