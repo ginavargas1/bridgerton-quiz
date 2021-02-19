@@ -1,8 +1,8 @@
-const startButton = document.getElementById('start-btn')
-const questionContainerElement = document.getElementById ('question-container')
-const shuffledQuestions, currentQuestionIndex
-const questionElement = document.getElementById('question')
-const answerButtonElement = document.getElementById ('answer-buttons')
+var startButton = document.getElementById('start-btn')
+var questionContainerElement = document.getElementById ('question-container')
+// var shuffledQuestions, currentQuestionIndex
+var questionElement = document.getElementById('question')
+var answerButtonElement = document.getElementById ('answer-buttons')
 
 
  startButton.addEventListener("click", startGame) 
@@ -26,34 +26,25 @@ const answerButtonElement = document.getElementById ('answer-buttons')
 
  }
 
-const questions = [
+var questions = [
     {
         question: "Who does the Daphne end up with?",
-        a: "Simon Basset",
-        b: "Prince Friedrich",
-        c: "Will Mondrich",
-        d: "Nigel Berbrooke",
-        answer: "A"
+        choices: ["Simon Basset", "Prince Friedrich", "Nigel Berbrook", "Prince Charles"],
+        answer: "Simon Basset"
 
     },
 
     {
         question: "What era does the show take place?",
-        a: "Georgian era",
-        b: "Regency era",
-        c: "Victorian era",
-        d: "Edwardian era",
-        answer: "B"
+        choices: ["Georgian era", "Regency era", "Victorian era", "Edwardian era"],
+        answer: "Regency era"
 
     },
 
     {
         question: "What is Simon’s title?",
-        a: "Duke of Sussex",
-        b: "Duke of Windsor",
-        c: "Duke of Hasting",
-        d: "Duke of Norfolk",
-        answer: "C"
+        choices: ["Duke of Sussex", "Duke of Windsor", "Duke of Hasting", "Duke of Norfolk"],
+        answer: "Duke of Hasting"
 
     },
 
@@ -61,8 +52,7 @@ const questions = [
         question: "What type of music is used throughout the show?",
         choices: ["Contemporary Pop Tunes", "Classic Mozart", "Contempary Jazz", "None of the Above"],
         answer: "Contemporary Pop Tunes"
-
-    };
+    }:
  
     var index = 0;
     var questionObj = questions[index];
